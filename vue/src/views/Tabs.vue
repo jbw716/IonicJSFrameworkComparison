@@ -30,8 +30,8 @@ export default {
   name: 'Tabs',
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
-    const shouldShowTabBar = ref(window.innerWidth <= 992);
-    const windowResized = () => shouldShowTabBar.value = window.innerWidth <= 992;
+    const shouldShowTabBar = ref(window.innerWidth < 992);
+    const windowResized = () => shouldShowTabBar.value = window.innerWidth < 992;
     onMounted(() => window.addEventListener('resize', windowResized))
     onUnmounted(() => window.removeEventListener('resize', windowResized))
     return {

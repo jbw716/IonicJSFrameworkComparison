@@ -11,7 +11,7 @@ export class TabsPage {
   constructor(private platform: Platform) {}
 
   shouldShowTabBar() {
-    return this.platform.width() <= 992;
+    return this.platform.width() < 992;
   }
 
 }

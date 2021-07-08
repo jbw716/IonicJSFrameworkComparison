@@ -5,8 +5,20 @@ import './Tabs.css';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
 import Tab1 from './Tab1';
+import { useEffect, useState } from 'react';
 
 const Tabs: React.FC = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  function widthChanged() {
+    setWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    window.addEventListener('resize', widthChanged);
+    return () => {
+      window.removeEventListener('resize', widthChanged);
+    }
+  });
+
   return (
     <IonTabs>
       <IonRouterOutlet>
@@ -23,7 +35,7 @@ const Tabs: React.FC = () => {
           <Redirect to="/tab1" />
         </Route>
       </IonRouterOutlet>
-      <IonTabBar slot="bottom">
+      <IonTabBar slot="bottom" style={{ display: width < 992 ? '' : 'none' }}>
         <IonTabButton tab="tab1" href="/tab1">
           <IonIcon icon={triangle} />
           <IonLabel>Tab 1</IonLabel>
