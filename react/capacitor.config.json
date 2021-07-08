@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "pantry",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
