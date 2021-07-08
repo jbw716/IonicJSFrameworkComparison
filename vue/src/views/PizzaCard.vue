@@ -47,10 +47,6 @@ export default {
   },
   setup() {
     const pizzaCount = ref(0);
-    watch(pizzaCount, (newPizzaCount: number, oldPizzaCount: number) => {
-        console.log('newPizzaCount: ' + newPizzaCount);
-        console.log('oldPizzaCount: ' + oldPizzaCount);
-    });
     return {
       pizza,
       pizzaCount,
