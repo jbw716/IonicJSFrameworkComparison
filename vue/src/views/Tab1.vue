@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>vueTab 1</ion-title>
+        <ion-title>Tab 1</ion-title>
         <ion-buttons slot="start">
           <ion-menu-button>
             <ion-icon :icon="menu"></ion-icon>
