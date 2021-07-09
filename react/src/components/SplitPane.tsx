@@ -16,7 +16,7 @@ const SplitPane: React.FC = () => {
           </IonHeader>
         </IonMenu>
         <IonRouterOutlet id="menu-content">
-          <Route path="/">
+          <Route path="*">
             <Tabs></Tabs>
           </Route>
         </IonRouterOutlet>

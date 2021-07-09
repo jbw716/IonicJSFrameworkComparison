@@ -22,17 +22,20 @@ const Tabs: React.FC = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Route exact path="/tab1">
+        <Route exact path="/tabs/tab1">
           <Tab1 />
         </Route>
-        <Route exact path="/tab2">
+        <Route exact path="/tabs/tab2">
           <Tab2 />
         </Route>
-        <Route path="/tab3">
+        <Route exact path="/tabs/tab3">
           <Tab3 />
         </Route>
+        <Route exact path="/tabs">
+          <Redirect to="/tabs/tab1" />
+        </Route>
         <Route exact path="/">
-          <Redirect to="/tab1" />
+          <Redirect to="/tabs" />
         </Route>
       </IonRouterOutlet>
       <IonTabBar slot="bottom" style={{ display: width < 992 ? '' : 'none' }}>
